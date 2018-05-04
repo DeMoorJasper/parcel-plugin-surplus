@@ -34,7 +34,7 @@
     ]
   },
   "peerDependencies": {
-    "parcel-bundler": "^1.5.1",
+    "parcel-bundler": "^1.8.1",
     "surplus": "^0.5.0-beta18"
   },
   "devDependencies": {

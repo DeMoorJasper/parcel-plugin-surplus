@@ -1,12 +1,9 @@
 module.exports = function(bundler) {
-  const jsAsset = require.resolve('./lib/js-asset.js');
-  const tsAsset = require.resolve('./lib/ts-asset.js');
+  const surplusAsset = require.resolve('./lib/surplus-asset.js');
 
-  bundler.addAssetType('js', jsAsset);
-  bundler.addAssetType('jsx', jsAsset);
-  bundler.addAssetType('es6', jsAsset);
-  bundler.addAssetType('jsm', jsAsset);
-  bundler.addAssetType('mjs', jsAsset);
-  bundler.addAssetType('ts', tsAsset);
-  bundler.addAssetType('tsx', tsAsset);
+  bundler.addAssetType('js', surplusAsset);
+  bundler.addAssetType('jsx', surplusAsset);
+  bundler.addAssetType('es6', surplusAsset);
+  bundler.addAssetType('jsm', surplusAsset);
+  bundler.addAssetType('mjs', surplusAsset);
 };

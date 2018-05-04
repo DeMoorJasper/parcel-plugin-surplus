@@ -10,8 +10,7 @@ describe('#initialization', () => {
   const Bundler = require('parcel-bundler')
   let bundler = new Bundler(inputPath)
   surplusPlugin(bundler)
-  const jsAsset = 'parcel-plugin-surplus/lib/js-asset'
-  const tsAsset = 'parcel-plugin-surplus/lib/ts-asset'
+  const jsAsset = 'parcel-plugin-surplus/lib/surplus-asset'
 
   it('surplus plugin should be a function', () =>
     expect(typeof surplusPlugin).toBe('function'))
@@ -26,8 +25,6 @@ describe('#initialization', () => {
     expect(bundler.parser.extensions['.jsm'].includes(jsAsset)).toBeTruthy())
   it('should define SurplusAsset as the mjs asset', () =>
     expect(bundler.parser.extensions['.mjs'].includes(jsAsset)).toBeTruthy())
-  it('should define SurplusAsset as the tsx asset', () =>
-    expect(bundler.parser.extensions['.tsx'].includes(tsAsset)).toBeTruthy())
 })
 
 describe('#transform', () => {
